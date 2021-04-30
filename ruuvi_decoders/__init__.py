@@ -4,7 +4,9 @@ __author__ = """Sergio Isidoro"""
 __email__ = 'smaisidoro@gmail.com'
 __version__ = '0.1.0'
 import logging
-from ruuvi_decoders.decoders import Df3Decoder, Df5Decoder, UrlDecoder
+from ruuvi_decoders.url_decoder import UrlDecoder
+from ruuvi_decoders.df3_decoder import Df3Decoder
+from ruuvi_decoders.df5_decoder import Df5Decoder
 
 log = logging.getLogger(__name__)
 
