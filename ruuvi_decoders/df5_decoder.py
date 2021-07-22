@@ -1,6 +1,5 @@
 from __future__ import division
 
-import base64
 import math
 import logging
 import struct
@@ -83,7 +82,9 @@ class Df5Decoder(object):
             dict: Sensor values
         """
         try:
-            byte_data = struct.unpack('>BhHHhhhHBH6B', bytearray.fromhex(data[:48]))
+            byte_data = struct.unpack(
+                '>BhHHhhhHBH6B', bytearray.fromhex(data[:48])
+            )
 
             acc_x, acc_y, acc_z = self._get_acceleration(byte_data)
             return {
@@ -91,14 +92,17 @@ class Df5Decoder(object):
                 'humidity': self._get_humidity(byte_data),
                 'temperature': self._get_temperature(byte_data),
                 'pressure': self._get_pressure(byte_data),
-                'acceleration': math.sqrt(acc_x * acc_x + acc_y * acc_y + acc_z * acc_z),
+                'acceleration': math.sqrt(
+                    acc_x * acc_x + acc_y * acc_y + acc_z * acc_z
+                ),
                 'acceleration_x': acc_x,
                 'acceleration_y': acc_y,
                 'acceleration_z': acc_z,
                 'tx_power': self._get_txpower(byte_data),
                 'battery': self._get_battery(byte_data),
                 'movement_counter': self._get_movementcounter(byte_data),
-                'measurement_sequence_number': self._get_measurementsequencenumber(byte_data),
+                'measurement_sequence_number':
+                    self._get_measurementsequencenumber(byte_data),
                 'mac': self._get_mac(byte_data)
             }
         except Exception:

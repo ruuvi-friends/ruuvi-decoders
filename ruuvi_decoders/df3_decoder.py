@@ -1,6 +1,5 @@
 from __future__ import division
 
-import base64
 import math
 import logging
 import struct
@@ -57,7 +56,9 @@ class Df3Decoder(object):
             dict: Sensor values
         """
         try:
-            byte_data = struct.unpack('>BBbBHhhhH', bytearray.fromhex(data[:28]))
+            byte_data = struct.unpack(
+                '>BBbBHhhhH', bytearray.fromhex(data[:28])
+            )
             acc_x, acc_y, acc_z = self._get_acceleration(byte_data)
             return {
                 'data_format': 3,
@@ -65,7 +66,8 @@ class Df3Decoder(object):
                 'temperature': self._get_temperature(byte_data),
                 'pressure': self._get_pressure(byte_data),
                 'acceleration': math.sqrt(
-                    acc_x * acc_x + acc_y * acc_y + acc_z * acc_z),
+                    acc_x * acc_x + acc_y * acc_y + acc_z * acc_z
+                ),
                 'acceleration_x': acc_x,
                 'acceleration_y': acc_y,
                 'acceleration_z': acc_z,

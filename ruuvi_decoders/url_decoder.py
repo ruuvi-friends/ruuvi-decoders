@@ -1,9 +1,7 @@
 from __future__ import division
 
 import base64
-import math
 import logging
-import struct
 
 log = logging.getLogger(__name__)
 

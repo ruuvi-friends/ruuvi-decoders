@@ -10,6 +10,7 @@ from ruuvi_decoders.df5_decoder import Df5Decoder
 
 log = logging.getLogger(__name__)
 
+
 def get_decoder(data_type):
     """
     Get correct decoder for Data Type.

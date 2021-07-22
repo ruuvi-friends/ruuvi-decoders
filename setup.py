@@ -30,6 +30,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
     description="Decoders for raw ruuvi tag data payloads",
     install_requires=requirements,
@@ -43,6 +44,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/sergioisidoro/ruuvi_decoders',
-    version='0.1.0',
+    version='0.2.0',
     zip_safe=False,
 )
