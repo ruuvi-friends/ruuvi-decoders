@@ -6,18 +6,12 @@ Ruuvi Decoders
 .. image:: https://img.shields.io/pypi/v/ruuvi_decoders.svg
         :target: https://pypi.python.org/pypi/ruuvi_decoders
 
-.. image:: https://img.shields.io/travis/sergioisidoro/ruuvi_decoders.svg
-        :target: https://travis-ci.com/sergioisidoro/ruuvi_decoders
-
-.. image:: https://readthedocs.org/projects/ruuvi-decoders/badge/?version=latest
-        :target: https://ruuvi-decoders.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
-
+.. image:: https://img.shields.io/travis/ruuvi-friends/ruuvi-decoders.svg
+        :target: https://travis-ci.com/ruuvi-friends/ruuvi-decoders
 
 .. image:: https://pyup.io/repos/github/sergioisidoro/ruuvi_decoders/shield.svg
      :target: https://pyup.io/repos/github/sergioisidoro/ruuvi_decoders/
      :alt: Updates
-
 
 
 Decoders for raw ruuvi tag data payloads
@@ -30,7 +24,9 @@ Decoders for raw ruuvi tag data payloads
 Features
 --------
 
-* TODO
+* Decode raw data from RuuviTag Bluetooh advertisements, or from Ruuvi gateway requests
+* Support for Ruuvitag Data Format 2, 3 and 5
+* Support for ULRDecoder (Eddystone)
 
 Credits
 -------
